@@ -11,7 +11,7 @@
 	<body>
 		<header>
 			{{#each categories}}
-				<a href="/categories/{{this.title}}">{{this.title}}</a>
+				<a href="/categories/{{this.url}}?title={{this.title}}">{{this.title}}</a>
 			{{/each}}
 		</header>
 		<nav class="navbar navbar-default">

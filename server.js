@@ -56,15 +56,17 @@ app.get('/', function(req, res) {
 app.get('/categories/:category', function(req, res) {
 	var categoryName = req.params.category;
 
+
 	Categories.findAll({
 		where: {
-			title: categoryName
+			url: categoryName
 		},
 		include: [{model: models.Posts, required: true}]
 	}).then(function(result) {
-		console.log('rending category');
+		console.log('rending category', result);
 		return res.render('categories', {
 			categoryName: categoryName,
+			title: req.query.title,
 			category: result
 		});
 	});
