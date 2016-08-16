@@ -9,7 +9,6 @@ var Comments = require('./models')['Comments'];
 var models  = require('./models');
 var sequelizeConnection = models.sequelize
 
-
 // We run this query so that we can drop our tables even though they have foreign keys
 sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 
@@ -50,6 +49,12 @@ app.get('/', function(req, res) {
 		});
 	});
 
+});
+
+
+//home page
+app.get('/login', function(req, res) {
+	res.render('login', {layout: 'loginlayout.handlebars'});
 });
 
 
