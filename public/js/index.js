@@ -38,7 +38,7 @@
 	});
 
 
-	$('.fa-thumbs-up').click(function() {		
+	$('.fa-heart').click(function() {		
 		//$(this).attr("disabled","disabled").addClass('disabled');
 		var score = $(this).siblings('.score');
 		var scoreNumber = parseInt(score.text());
@@ -60,7 +60,7 @@
 	        $('.part-'+rand).remove();
 	    }, timing*1000-100);
 
-	    		
+
 	});
 
 
