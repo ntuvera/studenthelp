@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "poop",
-    "database": "rcbreddit",
+    "password": null,
+    "database": "bootup",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
