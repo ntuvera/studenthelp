@@ -1,3 +1,7 @@
+.wrapper{
+	min-height: 100%;
+}
+
 .post {
 	border: 1px solid #cecece;
 	padding: 10px;

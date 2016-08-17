@@ -9,9 +9,11 @@
 
 	if (fireBaseSession) {
 		user = JSON.parse(fireBaseSession);
+
 	}
 
-	if (user && user.github) {		
+	if (user && user.github) {
+
 		//addd username to header
 		$('#login').hide();
 		$('#userinfo').append(user.github.username);

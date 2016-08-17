@@ -5,6 +5,7 @@ var sequelize = require('sequelize');
 var Posts = require('./models')['Posts'];
 var Categories = require('./models')['Categories'];
 var Comments = require('./models')['Comments'];
+var session = require('express-session');
 
 var models  = require('./models');
 var sequelizeConnection = models.sequelize
@@ -37,8 +38,19 @@ app.engine('handlebars', handlebars({
 
 app.set('view engine', 'handlebars');
 
+app.use(session({
+	secret: "mysupersecret",
+	resave: false,
+	cookie: {
+		maxAge: 60000 * 60 * 24 * 14
+	}
+}));
+
 //home page
 app.get('/', function(req, res) {
+	if (!req.session.user){
+		res.redirect('/login');
+	}
 
 	Posts.findAll({
 		order: 'score DESC'
