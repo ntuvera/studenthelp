@@ -15,7 +15,6 @@
 	if (user && user.github) {
 
 		//addd username to header
-		$('#login').hide();
 		$('#userinfo').append(user.github.username);
 		$('#userinfo').append('<img class="github-logo" src="' + user.github.profileImageURL + '"/>');
 		//show logout button
