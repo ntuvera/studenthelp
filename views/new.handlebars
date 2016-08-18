@@ -1,15 +1,15 @@
 <h1>Submit to bootUP!</h1>
-
+<form action="action_page.php">
 <form method="POST" action="/new-post">
 	<div>
-		Title: <input type="text" name="title" required minlength="10"/>
+		Title:<br> <input type="text" name="title" required minlength="10"/>
 	</div>
 	<div>
-		Description: <input type="text" name="description"/>
+		Description:<br> <input type="text" name="description"/>
 	</div>
 
 	<div>
-		Category:
+		Category:<br>
 		<select name="category" required>
 			<option value="">Please select a category</option>
 			{{#each categories}}
@@ -20,12 +20,12 @@
 
 
 	<div>
-		Url: <input type="text" name="url"/>
+		Url:<br> <input type="text" name="url"/>
 	</div>
 
 	<div>
-		Image Url: <input type="text" name="image"/>
+		Image Url:<br> <input type="text" name="image"/>
 	</div>
 	<button type="submit">Submit</button>
 </form>
-
+</form>
