@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
@@ -20,7 +21,7 @@
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 
-		      <a class="navbar-brand" href="/">
+		       <a class="navbar-brand" href="/">
 		        <img alt="BootUp" class="bootup-brand" src="/image/bootuplogo.png">
 		      </a>
 
@@ -40,8 +41,7 @@
 		        <li>
 		        	<button class="btn btn-primary" id="logout">Logout</button>
 		        	</li>		        		          
-		        <li><div id="userinfo">Hello </div></li>
-		      </ul>
+		        <h1 id="mainLogo">bootUP!</h1>
 		      		      	
 		      </div>
 		    </div>
@@ -50,10 +50,12 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 	<div class="container">
+	<div class="wrapper">
 		{{{ body }}}
 		<!-- Start Content -->
 		<div class="particle-box"></div>
-		<!-- End Content -->		
+		<!-- End Content -->
+	</div>			
 	</div>
 
 
