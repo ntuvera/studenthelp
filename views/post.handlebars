@@ -1,5 +1,50 @@
-<h1>{{post.title}}</h1>
-<div>Created At: {{post.createdAt}}</div>
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2 class="panel-title">{{post.title}}</h2>
+  </div>
+  <div class="panel-body">
+ <dl class="dl-horizontal">
+  <dt><h4>Created At:</h4></dt>
+  <dd>{{post.createdAt}}</dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt><h4>Image:</h4></dt>
+  <dd>{{post.image}}</dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt><h4>Description:</h4></dt>
+  <dd>{{post.description}}</dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt><h4>Score:</h4></dt>
+  <dd>{{post.score}}</dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt><h4>Url:</h4></dt>
+  <dd><a href= "{{post.url}}">{{post.url}}</a></dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt><h4>Comments</h4></dt>
+  <dd><form action="//comment" method="post">
+  <input type="text" name="comment" value="" placeholder="Add a comment">
+  <button type="submit">Submit</button>
+</form></dd>
+</dl>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>{{post.title}}</h1> -->
+<!--<div>Created At: {{post.createdAt}}</div>
 <h2>Image: {{post.image}}</h2>
 <h2>Description: {{post.description}}</h2>
 <h2>Score: {{post.score}}</h2>
@@ -13,4 +58,4 @@
 <h1>Comments:</h1>
 {{#each post.Comments}}
   <div>{{this.createdAt}} - {{this.comment}}</div>
-{{/each}}
+{{/each}} -->
