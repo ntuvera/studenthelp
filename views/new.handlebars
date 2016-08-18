@@ -1,11 +1,13 @@
+
  <section class="container login">
  	<h1 class="text-center">Submit to bootUP!</h1>
 		<form method="POST" action="/new-post">
 			 <input type="text" name="title" placeholder="Title" class="form-control" minlength="10"/>
 		   <input type="text" name="description" placeholder="Description" class="form-control" />
 		  <!-- unsure how to use this and don't want to touch because it directly deals with the handlebars and don't want to move anything out of sync -->
+<h1>Submit to bootUP!</h1>
 	<div>
-		Category:
+		Category:<br>
 		<select name="category" required>
 			<option value="">Please select a category</option>
 			{{#each categories}}

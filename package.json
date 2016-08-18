@@ -1,7 +1,7 @@
 {
   "name": "bootup",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wahid Carvan",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,5 +17,13 @@
     "firebase": "^3.3.0",
     "mysql": "^2.11.1",
     "sequelize": "^3.24.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamTh3Walrus/BootUp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IamTh3Walrus/BootUp/issues"
+  },
+  "homepage": "https://github.com/IamTh3Walrus/BootUp#readme"
 }
