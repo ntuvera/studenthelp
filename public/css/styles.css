@@ -46,16 +46,19 @@ footer {
 header {
 	background-color: #000;
 	color: #fff;
+	text-align: center;
+	font-family: sans-serif, 12px;
+	padding: 15;
 }
 header a {
-	color: #fff;
+	color: white;
 	margin: 0 10px;
 }
 header a:hover {
-	color: #fff;
+	color: white;
 }
 header a:focus {
-	color: #fff;
+	color: white;
 }
 
 #logout {
