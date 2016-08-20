@@ -118,6 +118,7 @@ app.post('/new-post', function(req, res) {
 		url: body.url,
 		image: body.image,
 		score: 0,
+		snippet: body.snippet,
 		CategoryId: parseInt(body.category, 10),
 		description: body.description
 	}).then(function(data) {
