@@ -16,7 +16,7 @@
     "express-session": "^1.14.0",
     "firebase": "^3.3.0",
     "mysql": "^2.11.1",
-    "sequelize": "^3.24.0"
+    "sequelize": "^3.24.1"
   },
   "repository": {
     "type": "git",
