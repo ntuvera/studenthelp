@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     image: DataTypes.STRING,
     score: DataTypes.INTEGER,
     description: DataTypes.STRING,
-    snippet: DataTypes.STRING
+    snippet: DataTypes.TEXT
   }, {
     classMethods: {
       associate: function(models) {

@@ -20,10 +20,11 @@
   <dd>{{post.score}}</dd>
 </dl>
 
-<dl class="dl-horizontal">
-  <dt><h4>Snippet:</h4></dt>
-  <dd>{{post.snippet}}</dd>
-</dl>
+{{#if post.snippet}}
+<div>
+  <pre><code>{{post.snippet}}</code></pre>  
+</div>
+{{/if}}
 
 <dl class="dl-horizontal">
   <dt><h4>Url:</h4></dt>

@@ -16,6 +16,10 @@
 			{{this.title}}
 		{{/if}}	
 		<a href="/posts/{{this.id}}" class="btn btn-warning pull-right">View Details</a>
+		{{#if this.snippet}}
+		<pre><code>{{this.snippet}}</code></pre>
+		{{/if}}
 	</div>
+
 {{/each}}
 
