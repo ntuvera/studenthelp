@@ -38,11 +38,13 @@
 </form></dd>
 </dl>
 
-<h1>Comments:</h1>
+<dl class="dl-horizontal">
+<dd><dt><h1>Comments:</h1></dt>
 {{#each post.Comments}}
   <div>{{this.createdAt}} - {{this.comment}}</div>
 {{/each}} 
-
+</dd>
+</dl>
 
 </div>
 </div>
