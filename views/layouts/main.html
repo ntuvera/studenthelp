@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>bootUP!</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+           <a class="navbar-brand" href="/">
+            <img alt="BootUp" class="bootup-brand" src="/image/bootuplogo.png">
+          </a>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/new-post">Submit New Post <span class="sr-only">(current)</span></a></li>      
+            <li>
+            <li id="userinfo"></li>
+              <button class="btn btn-Primary" id="logout">Logout</button>
+              </li>                         
+            <h1 id="mainLogo">bootUP!</h1>
+                      
+          </div>
+        </div>
+
+        <header id="header">
+      {{#each categories}}
+        <a href="/categories/{{this.url}}?title={{this.title}}">{{this.title}}</a>
+      {{/each}}
+      </header> 
+
+        
+      </div><!-- /.container-fluid -->
+    </nav>
+  <div class="container">
+  <div class="wrapper">
+    {{{ body }}}
+    <!-- Start Content -->
+    <div class="particle-box"></div>
+    <!-- End Content -->
+  </div>      
+  </div>
+
+
+  <footer id="footerFont">bootUP!</footer>
+  <script type="text/javascript" src="/js/index.js"></script>
+</main>
+</body>
+</html>
