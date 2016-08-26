@@ -42,11 +42,22 @@ body {
 }
 
 footer {
-    height: 100px;
+    height: 150px;
     width: 100%;
     padding: 10px;
     background-color: #000;
     text-align: center;
+}
+
+#footerBoot {
+    font-family: 'Righteous', cursive;
+    text-shadow: 1px 1px #fff;
+    color: #cc0033;
+    font-size: 30px;
+}
+
+#footerFont {
+    color: #fff;
 }
 
 .voting {
@@ -92,6 +103,19 @@ header a:focus {
     margin-top: 55px;
     margin-right: 10px;
 }
+#stephenGit{
+    height: 80px;
+    width: 80px;
+}
+#nancyGit{
+    height: 80px;
+    width: 80px;
+}
+#karinaGit{
+    height: 80px;
+    width: 80px;
+}
+
 
 
 /* new.handlebars */
