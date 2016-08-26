@@ -6,6 +6,7 @@ var Posts = require('./models')['Posts'];
 var Categories = require('./models')['Categories'];
 var Comments = require('./models')['Comments'];
 var session = require('express-session');
+var moment = require('moment');
 
 var models  = require('./models');
 var sequelizeConnection = models.sequelize
@@ -99,12 +100,14 @@ app.post('/:postId/comment', function(req, res) {
 	var body = req.body;
 	console.log('body', body);
 	var comment = body.comment;
+	console.log(req.params.postId, 10);
 
 	Comments.create({
 		comment: comment,
-		PostId: parseInt(req.params.postId, 10)
+		PostId: parseInt(req.params.postId)
 	}).then(function(data) {
 		res.redirect('/posts/' + req.params.postId);
+		console.log(req.params.postId);
 	});
 });
 
