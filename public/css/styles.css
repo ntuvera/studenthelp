@@ -106,14 +106,17 @@ header a:focus {
 #stephenGit{
     height: 80px;
     width: 80px;
+    border-radius: 20px;
 }
 #nancyGit{
     height: 80px;
     width: 80px;
+    border-radius: 20px;
 }
 #karinaGit{
     height: 80px;
     width: 80px;
+    border-radius: 20px;
 }
 
 
