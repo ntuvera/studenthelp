@@ -100,14 +100,14 @@ app.post('/:postId/comment', function(req, res) {
 	var body = req.body;
 	console.log('body', body);
 	var comment = body.comment;
-	console.log(req.params.postId, 10);
+
 
 	Comments.create({
 		comment: comment,
 		PostId: parseInt(req.params.postId)
 	}).then(function(data) {
 		res.redirect('/posts/' + req.params.postId);
-		console.log(req.params.postId);
+
 	});
 });
 
@@ -141,7 +141,9 @@ app.get('/posts/:id', function(req, res) {
 		},
 		include: [models.Comments]
 	}).then(function(post) {
-		console.log('post', post);
+		//console.log('post', post);
+		console.log(post.createdAt);
+		//moment goes here
 		res.render('post', {
 			post: post
 		});

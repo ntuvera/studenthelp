@@ -1,7 +1,7 @@
 {
   "name": "bootup",
   "version": "1.0.0",
-  "description": "Wahid Carvan",
+  "description": "Nancy Lukas",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/IamTh3Walrus/BootUp/issues"
   },
-  "homepage": "https://github.com/IamTh3Walrus/BootUp#readme"
+  "homepage": "https://github.com/IamTh3Walrus/BootUp#readme",
+  "devDependencies": {
+    "handlebars-helper-moment": "^0.2.0"
+  }
 }
