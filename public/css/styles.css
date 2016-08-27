@@ -1,22 +1,27 @@
 #mainLogo {
     font-family: 'Righteous', cursive;
     font-size: 100px;
-    margin-left: 400px;
     text-align: center;
     text-shadow: 3px 3px #FFFFFF;
+    margin-left: 150px;
+    margin-top:0;
 }
 
 .logout {
-	
-}
 
+}
+#logout{
+    color:#fff;
+    margin-left: 30px;
+    background-color: #000;
+}
 .wrapper {
     min-height: 100%;
     position: relative;
 }
 
 html {
-    height: 100%;
+    height:100%;
     margin: 0;
     padding: 0;
 }
@@ -41,12 +46,26 @@ body {
     width: 80px;
 }
 
+#secondHeader{
+    width: 100%;
+    background-color: #CC0033;
+}
+
 footer {
     height: 150px;
     width: 100%;
     padding: 10px;
     background-color: #000;
     text-align: center;
+}
+#topNav{
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: #f0ad4e;
+}
+
+#submitPost{
+    background-color:#f0ad4e;
 }
 
 #footerBoot {

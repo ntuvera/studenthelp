@@ -14,59 +14,26 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 </head>
+
 	<body>
+	<div id="secondHeader">
+		<nav class="navbar navbar-default pull-right clearfix" id="topNav">
+		<div id="userinfo"></div>
+		<button type="button" class="btn btn-default" id="logout">Logout</button>
+		</nav>
+		<h1 id="mainLogo">bootUP!</h1>
+	
 		<header id="header">
 			{{#each categories}}
 				<a href="/categories/{{this.url}}?title={{this.title}}">{{this.title}}</a>
 			{{/each}}
 		</header> 
-
-		
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		  	<div class="navbar-header">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		    </div>
-
-
-	   			<ul class="nav navbar-nav navbar-right">
-
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		    	<div class="row">
-		    		<div class="col-xs-6 col-md-4">
-		    			<a class="navbar-brand" href="/">
-		       			 <img alt="BootUp" class="bootup-brand" src="/image/bootuplogo.png">
-		      		</a>
-		    		</div>
-		    	
-		    		<div class="col-xs-6 col-md-4">
-		    			<h1 id="mainLogo">bootUP!</h1>
-		    		</div>
-
-		    		<div class="clearfix visible-xs-block"></div>
-		    		<div class="col-xs-6 col-md-4">
-		    			 <ul class="nav navbar-nav navbar-right">
-		    			 <button type="button" class="btn btn-default">
-		    			 	<li class="active"><a href="/new-post">Submit New Post <span class="sr-only">(current)</span></a></li>     
+		</div>
+		<button type="button" class="btn btn-default" id="submitPost">
+		    			 	<a href="/new-post">Submit New Post <span class="sr-only">(current)</span></a>    
 		    			 </button>
-		    			 <br>
-		    			 <li>
-		        		<li id="userinfo"></li>
-		        		<button type="button" class="btn btn-default" id="logout">Logout</button>
-		        	</li>	
-		    	</div>
-				</div>		    
-
-		    
-
-		    
-		</nav>
+	
+		
 	<div class="container">
 	<div class="wrapper">
 		{{{ body }}}
@@ -92,6 +59,5 @@
 	 </footer>
 
 	<script type="text/javascript" src="/js/index.js"></script>
-</main>
 </body>
 </html>
