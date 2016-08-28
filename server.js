@@ -144,12 +144,10 @@ app.get('/posts/:id', function(req, res) {
 		//console.log('post', post);
 		console.log(post);
 		//moment goes here
-		post.createdAt = moment(post.createdAt).format('LLL')
-		res.render('post', {
-			post: post
+		//post.createdAt = moment(post.createdAt).format('LLL')
+		//res.render('post', {
+			//post: post
 		});
-	});
-});
 
 //app.post('/posts/:id/:vote', function(req, res) {
 	//var operation = '+';
