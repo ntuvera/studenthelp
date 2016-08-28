@@ -142,19 +142,20 @@ app.get('/posts/:id', function(req, res) {
 		include: [models.Comments]
 	}).then(function(post) {
 		//console.log('post', post);
-		console.log(post.createdAt);
+		console.log(post);
 		//moment goes here
+		post.createdAt = moment(post.createdAt).format('LLL')
 		res.render('post', {
 			post: post
 		});
 	});
 });
 
-app.post('/posts/:id/:vote', function(req, res) {
-	var operation = '+';
-	if (req.params.vote === 'downvote') {
-		operation = '-';
-	}
+//app.post('/posts/:id/:vote', function(req, res) {
+	//var operation = '+';
+	//if (req.params.vote === 'downvote') {
+		//operation = '-';
+	//}
 
 	Posts.update({
 		score: sequelize.literal('score ' + operation + ' 1')},
