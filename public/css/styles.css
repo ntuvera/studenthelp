@@ -1,3 +1,4 @@
+
 #mainLogo {
     font-family: 'Righteous', cursive;
     font-size: 100px;
@@ -119,7 +120,7 @@ header a:focus {
 .bootup-brand {
     height: 100px;
     border-radius: 20px;
-    margin-top: 55px;
+    /*margin-top: 55px;*/
     margin-right: 10px;
 }
 #stephenGit{
