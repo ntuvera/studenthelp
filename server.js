@@ -139,21 +139,17 @@ app.get('/posts/:id', function(req, res) {
 		where: {
 			id: id
 		},
-		include: [models.Comments]
+		include: models.Comments
 	}).then(function(post) {
-		//console.log('post', post);
 		console.log(post);
-		//moment goes here
-		//post.createdAt = moment(post.createdAt).format('LLL')
-		//res.render('post', {
-			//post: post
-		});
+	});
+});
 
-//app.post('/posts/:id/:vote', function(req, res) {
-	//var operation = '+';
-	//if (req.params.vote === 'downvote') {
-		//operation = '-';
-	//}
+app.post('/posts/:id/:vote', function(req, res) {
+	var operation = '+';
+	if (req.params.vote === 'downvote') {
+		operation = '-';
+	};
 
 	Posts.update({
 		score: sequelize.literal('score ' + operation + ' 1')},
@@ -166,3 +162,7 @@ var port = process.env.PORT || 3000;
 app.listen(port, function() {
 	console.log('connected to', port);
 });
+
+
+
+
