@@ -6,7 +6,7 @@ var Posts = require('./models')['Posts'];
 var Categories = require('./models')['Categories'];
 var Comments = require('./models')['Comments'];
 var session = require('express-session');
-var moment = require('moment');
+//var moment = require('moment');
 
 var models  = require('./models');
 var sequelizeConnection = models.sequelize
@@ -134,14 +134,18 @@ app.post('/new-post', function(req, res) {
 
 
 app.get('/posts/:id', function(req, res) {
+	console.log('in posts route');
 	var id = req.params.id;
 	Posts.findOne({
 		where: {
 			id: id
 		},
-		include: models.Comments
+		include: [models.Comments]
 	}).then(function(post) {
-		console.log(post);
+		console.log('post', post);
+		res.render('post', {
+			post: post
+		});
 	});
 });
 
