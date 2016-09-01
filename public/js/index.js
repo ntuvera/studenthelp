@@ -13,7 +13,7 @@
 	}
 
 	if (user && user.github) {
-		debugger;
+		
 		//addd username to header
 		$('#userinfo').append(user.github.username);
 		$('#userinfo').append('<img class="github-logo" src="' + user.github.profileImageURL + '"/>');
