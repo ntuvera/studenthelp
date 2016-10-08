@@ -5,13 +5,14 @@ var sequelize = require('sequelize');
 var Posts = require('./models')['Posts'];
 var Categories = require('./models')['Categories'];
 var Comments = require('./models')['Comments'];
+var Search = require('./models')['Search'];
 var session = require('express-session');
 //var moment = require('moment');
 
 var models  = require('./models');
 var sequelizeConnection = models.sequelize
 
-// We run this query so that we can drop our tables even though they have foreign keys
+// We run this query s o that we can drop our tables even though they have foreign keys
 sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 
 // make our tables
@@ -83,6 +84,26 @@ app.get('/categories/:category', function(req, res) {
 	}).then(function(result) {
 		console.log('rending category', result);
 		return res.render('categories', {
+			categoryName: categoryName,
+			title: req.query.title,
+			category: result
+		});
+	});
+});
+
+
+app.get('/search/:searchies', function(req, res) {
+	var searchName = req.params.searchies;
+
+
+	Search.findAll({
+		where: {
+			url: searchName
+		},
+		include: [{model: models.Posts, required: true}]
+	}).then(function(result) {
+		console.log('rending searchies', result);
+		return res.render('searchies', {
 			categoryName: categoryName,
 			title: req.query.title,
 			category: result
