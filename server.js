@@ -92,25 +92,6 @@ app.get('/categories/:category', function(req, res) {
 });
 
 
-app.get('/search/:searchies', function(req, res) {
-	var searchName = req.params.searchies;
-
-
-	Search.findAll({
-		where: {
-			url: searchName
-		},
-		include: [{model: models.Posts, required: true}]
-	}).then(function(result) {
-		console.log('rending searchies', result);
-		return res.render('searchies', {
-			categoryName: categoryName,
-			title: req.query.title,
-			category: result
-		});
-	});
-});
-
 //form page
 app.get('/new-post', function(req, res) {
 	res.render('new');
