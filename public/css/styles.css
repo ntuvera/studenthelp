@@ -1,8 +1,8 @@
 #mainLogo {
-    font-family: 'Righteous', cursive;
+    font-family: 'Roboto', cursive;
     font-size: 100px;
     text-align: center;
-    text-shadow: 3px 3px #FFFFFF;
+    text-shadow: 3px 3px ##0C0C0C;
     margin-left: 150px;
     margin-top: 0;
 }
