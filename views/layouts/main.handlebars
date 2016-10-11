@@ -16,6 +16,7 @@
 </head>
 
 	<body>
+	
 	<div id="secondHeader">
 		<a class="navbar-brand" href="/">
         <img alt="BootUp" class="bootup-brand" src="/image/bootuplogo.png">
@@ -25,6 +26,7 @@
 		<button type="button" class="btn btn-default" id="logout">Logout</button>
 		</nav>
 		<h1 id="mainLogo">Bootup!</h1>
+		{{>search}}
 	
 		<header id="header">
 			{{#each categories}}
@@ -35,7 +37,11 @@
 			
 		</header> 
 		</div>
+		<br>
+		<br>
+		<br>
 		<div id="thirdHeader">
+
 			<button type="button" class="btn btn-default" id="submitPost">
 		    			 	<a href="/new-post">Submit New Post <span class="sr-only">(current)</span></a>    
 		    			 </button>

@@ -13,11 +13,11 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "production": {
-    "username": "z529jthx593oiq41",
-    "password": "y1q0fd76bua0subm",
-    "database": "yuvlwxh3ptd9q1z1",
-    "host": "jw0ch9vofhcajqg7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+ "production": {
+    "username": "root",
+    "password": "Dean1812",
+    "database": "bootup",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }

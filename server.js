@@ -53,17 +53,36 @@ app.get('/', function(req, res) {
 	// if (!req.session.user){
 	// 	res.redirect('/login');
 	// }
-
-	Posts.findAll({
-		order: 'score DESC'
-	}).then(function(result) {
-		console.log(result);
-		return res.render('index', {
+	console.log('LOOOOOOOOOOOK HERE!!!!')
+	Posts.findOne(
+		// order: 'score DESC'
+	).then(function(result) {
+		console.log('yay')
+		// console.log(result);
+  	res.render('index', {
 			posts: result
 		});
 	});
 
 });
+
+// search bar on home page
+
+// app.get('/', function(req, res) {
+// 	// if (!req.session.user){
+// 	// 	res.redirect('/login');
+// 	// }
+
+// 	Search.findAll({
+// 		order: 'score DESC'
+// 	}).then(function(result) {
+// 		console.log(result);
+// 		return res.render('index', {
+// 			posts: result
+// 		});
+// 	});
+
+// });
 
 
 //home page
@@ -164,11 +183,26 @@ app.post('/posts/:id/:vote', function(req, res) {
 	});
 });
 
+// Create a route for the AJAX search POST request
+
+app.post('/queryPosts', function(req, res) {
+	console.log("Here is the query stuff ", req.body)
+	
+	Posts.find({
+		title: req.body.title,
+		url: req.body.url 
+	}).then(function(data) {
+
+		console.log('found something')
+		res.send(data);	
+	});
+	
+});
+
+
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
 	console.log('connected to', port);
 });
-
-
 
 
