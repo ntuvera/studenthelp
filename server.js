@@ -187,14 +187,13 @@ app.post('/posts/:id/:vote', function(req, res) {
 
 app.post('/queryPosts', function(req, res) {
 	console.log("Here is the query stuff ")
-	
+  console.log(req.body.title)	
 	Posts.findAll({
 		title: req.body.title
 	}).then(function(data) {
 
 		console.log('found something')
 		// res.send(data);	
-	  console.log('heres somet stuff!', data)	
 		res.render('search', {data:data})
 	});
 	
