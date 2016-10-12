@@ -21,7 +21,7 @@ sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 	return sequelizeConnection.sync({})
 }).then(function() {
 	Categories.findAll({}).then(function(results) {
-		console.log(results);
+		// console.log(results);
 		app.locals.categories = results;
 	});
 })
@@ -54,12 +54,12 @@ app.get('/', function(req, res) {
 	// 	res.redirect('/login');
 	// }
 	console.log('LOOOOOOOOOOOK HERE!!!!')
-	Posts.findOne(
+	Posts.find(
 		// order: 'score DESC'
 	).then(function(result) {
 		console.log('yay')
 		// console.log(result);
-  	res.render('index', {
+  	return res.render('index', {
 			posts: result
 		});
 	});
@@ -186,15 +186,16 @@ app.post('/posts/:id/:vote', function(req, res) {
 // Create a route for the AJAX search POST request
 
 app.post('/queryPosts', function(req, res) {
-	console.log("Here is the query stuff ", req.body)
+	console.log("Here is the query stuff ")
 	
-	Posts.find({
-		title: req.body.title,
-		url: req.body.url 
+	Posts.findAll({
+		title: req.body.title
 	}).then(function(data) {
 
 		console.log('found something')
-		res.send(data);	
+		// res.send(data);	
+	  console.log('heres somet stuff!', data)	
+		res.render('search', {data:data})
 	});
 	
 });
